@@ -296,15 +296,11 @@ PRODUCT_PACKAGES += \
     WifiResCommon
 
 PRODUCT_PACKAGES += \
-    DialerResXiaomi \
     FrameworksResTarget \
     FrameworksResXiaomi \
     LineageResXiaomi \
     SettingsProviderResXiaomi \
-    SettingsResXiaomi \
-    WifiResTarget \
-    WifiResTarget_cape \
-    WifiResTarget_spf
+    SettingsResXiaomi
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
@@ -317,6 +313,10 @@ PRODUCT_PACKAGES += \
     vendor_vm-system_mountpoint
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Perf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Power
 PRODUCT_PACKAGES += \
